@@ -111,7 +111,7 @@ function confirmReset() {
 function showResult(element, message, isSuccess) {
     element.textContent = message;
     element.className = 'result ' + (isSuccess ? 'success' : 'error');
-    element.style.display = 'block';  // ← ADD THIS LINE
+    element.style.display = 'block';  // ← KEY FIX HERE
     
     setTimeout(() => {
         if (!isSuccess) {
