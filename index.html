@@ -9,12 +9,13 @@
 <body>
   <div class="stars"></div>
   <div class="container">
+    
     <header>
       <h1>🚩 Forensics CTF Platform</h1>
       <p class="subtitle">Test your forensics skills</p>
       <div class="header-controls">
         <div class="score-board">
-          Score: <span id="score">0</span>/15
+          Score: <span id="score">0</span>/16
         </div>
         <button id="resetBtn" class="reset-btn">🔄 Reset Progress</button>
       </div>
@@ -22,6 +23,30 @@
 
     <div class="sections-container">
 
+      <!-- INTRODUCTION SECTION -->
+      <section id="introduction" class="challenge-section">
+        <h2>Introduction</h2>
+        <div class="challenges-grid">
+          <div class="challenge-card" data-challenge="intro1">
+            <div class="challenge-header">
+              <h3>Welcome to the CTF!</h3>
+              <span class="difficulty easy">Easy</span>
+            </div>
+            <div class="challenge-body">
+              <p><strong>Important:</strong> All flags in this CTF are in <strong>lowercase</strong>.</p>
+              <p>To complete this introductory challenge, simply enter the word: <code>flag</code></p>
+              <p>This will help you understand how the submission system works!</p>
+            </div>
+            <div class="challenge-footer">
+              <input type="text" placeholder="Enter flag..." class="flag-input" />
+              <button class="submit-btn">Submit</button>
+              <div class="result"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FTK IMAGER SECTION -->
       <section id="ftk-imager" class="challenge-section">
         <h2>FTK Imager</h2>
         <div class="challenges-grid">
@@ -57,6 +82,7 @@
         </div>
       </section>
 
+      <!-- KAPE SECTION -->
       <section id="kape" class="challenge-section">
         <h2>KAPE</h2>
         <div class="challenges-grid">
@@ -74,6 +100,7 @@
               <div class="result"></div>
             </div>
           </div>
+
           <div class="challenge-card" data-challenge="kape2">
             <div class="challenge-header">
               <h3>Artifact Parsing</h3>
@@ -91,6 +118,7 @@
         </div>
       </section>
 
+      <!-- HAYABUSA SECTION -->
       <section id="hayabusa" class="challenge-section">
         <h2>Hayabusa</h2>
         <div class="challenges-grid">
@@ -111,6 +139,7 @@
         </div>
       </section>
 
+      <!-- HINDSIGHT SECTION -->
       <section id="hindsight" class="challenge-section">
         <h2>HindSight</h2>
         <div class="challenges-grid">
@@ -131,6 +160,7 @@
         </div>
       </section>
 
+      <!-- TIMELINE EXPLORER SECTION -->
       <section id="timeline-explorer" class="challenge-section">
         <h2>Timeline Explorer</h2>
         <div class="challenges-grid">
@@ -151,6 +181,7 @@
         </div>
       </section>
 
+      <!-- THOR LITE SECTION -->
       <section id="thor-lite" class="challenge-section">
         <h2>THOR Lite</h2>
         <div class="challenges-grid">
@@ -171,6 +202,7 @@
         </div>
       </section>
 
+      <!-- EZTOOLS SECTION -->
       <section id="eztools" class="challenge-section">
         <h2>EZTools</h2>
         <div class="challenges-grid">
@@ -191,6 +223,7 @@
         </div>
       </section>
 
+      <!-- REGISTRY EXPLORER SECTION -->
       <section id="registry-explorer" class="challenge-section">
         <h2>Registry Explorer</h2>
         <div class="challenges-grid">
@@ -211,6 +244,7 @@
         </div>
       </section>
 
+      <!-- PHOTOREC SECTION -->
       <section id="photorec" class="challenge-section">
         <h2>PhotoRec</h2>
         <div class="challenges-grid">
@@ -237,6 +271,7 @@
       <h2>🎉 Congratulations!</h2>
       <p>You've completed all challenges!</p>
     </div>
+
   </div>
 
   <script src="challenges.js"></script>
