@@ -12,6 +12,7 @@ let totalScore = parseInt(localStorage.getItem('totalScore')) || 0;
 document.addEventListener('DOMContentLoaded', () => {
     updateScore();
     loadSolvedChallenges();
+    checkAndUnlockChallenges();
     setupEventListeners();
     setupResetButton();
     createModal();
@@ -45,6 +46,8 @@ function setupEventListeners() {
                 card.classList.add('solved');
                 showResult(result, '✓ Correct! Challenge solved!', true);
                 input.disabled = true;
+
+                checkAndUnlockChallenges();
                 
                 if (solvedChallenges.length === Object.keys(challenges).length) {
                     setTimeout(() => {
