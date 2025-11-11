@@ -22,6 +22,12 @@ function setupEventListeners() {
     document.querySelectorAll('.submit-btn').forEach(btn => {
         btn.addEventListener('click', async (e) => {
             const card = e.target.closest('.challenge-card');
+            
+            // Prevent submission if card is locked
+            if (card.classList.contains('locked')) {
+                return;
+            }
+            
             const challengeId = card.dataset.challenge;
             const input = card.querySelector('.flag-input');
             const result = card.querySelector('.result');
@@ -114,7 +120,7 @@ function confirmReset() {
 function showResult(element, message, isSuccess) {
     element.textContent = message;
     element.className = 'result ' + (isSuccess ? 'success' : 'error');
-    element.style.display = 'block';  // ← KEY FIX HERE
+    element.style.display = 'block';
     
     setTimeout(() => {
         if (!isSuccess) {
@@ -134,7 +140,7 @@ function loadSolvedChallenges() {
             card.classList.add('solved');
             const input = card.querySelector('.flag-input');
             const result = card.querySelector('.result');
-            input.disabled = true;
+            if (input) input.disabled = true;
             showResult(result, '✓ Already solved!', true);
         }
     });
@@ -145,14 +151,21 @@ function loadSolvedChallenges() {
 }
 
 function checkAndUnlockChallenges() {
-    document.querySelectorAll('.challenge-card.locked').forEach(card => {
+    // Check all challenges that have requirements
+    document.querySelectorAll('.challenge-card[data-requires]').forEach(card => {
         const requires = card.dataset.requires;
         if (requires) {
             const requiredChallenges = requires.split(',');
             const allCompleted = requiredChallenges.every(id => solvedChallenges.includes(id));
             
             if (allCompleted) {
+                // Unlock if all requirements are met
                 card.classList.remove('locked');
+            } else {
+                // Keep locked if requirements not met
+                if (!card.classList.contains('locked')) {
+                    card.classList.add('locked');
+                }
             }
         }
     });
