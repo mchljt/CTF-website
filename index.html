@@ -544,7 +544,9 @@
               <span class="difficulty medium">Medium</span>
             </div>
             <div class="challenge-body">
-              <p>What is the name of the YARA rule which triggered this alert?</p>
+              <p>Look at the hex code in the THOR Lite alert.</p>
+              <p>The YARA rule which triggered this alert is found within.</p>
+              <p>What is the name of the YARA rule?</p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
@@ -555,12 +557,14 @@
 
           <div class="challenge-card" data-challenge="thor5">
             <div class="challenge-header">
-              <h3>Challenge 5</h3>
+              <h3>???</h3>
               <span class="difficulty hard">Hard</span>
             </div>
             <div class="challenge-body">
-              <p>Description for THOR Lite Challenge 5.</p>
-              <p><strong>Flag format:</strong> <code>flag{thor5}</code></p>
+              <p>Navigate to the following directory: <strong>G:\ProgramData\Microsoft\Windows Defender\Support</strong></p>
+              <p>This directory contains Windows Defender activity logs.</p>
+              <p>Determining if the mpcache file was created due to a detection allows us to identify if this VM has been compromised.</p>
+              <p>View the <strong>MPDetection</strong> file using Notepad++. Did Defender detect any malicious files? (y/n)</p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
@@ -569,14 +573,18 @@
             </div>
           </div>
 
-                    <div class="challenge-card" data-challenge="thor6">
+          <div class="challenge-card" data-challenge="thor6">
             <div class="challenge-header">
-              <h3>Hash Value Investigation</h3>
+              <h3>Defender what have u been doing?</h3>
               <span class="difficulty medium">Medium</span>
             </div>
             <div class="challenge-body">
-              <p>Find the SHA256 hash of the malicious file detected by THOR Lite.</p>
-              <p>Submit only the first 16 characters of the hash.</p>
+              <p>We still need to determine how the mpcache file was created.</p>
+              <p>In the same directory, view the <strong>MPLog</strong> file using Notepad++. This file contains all Defender activity.</p>
+              <p>Viewing this file allows us to identify when the mpcache file was created, and the events leading up to its creation.</p>
+              <p>Search for the mpcache file in Notepad++. Prior to its creation, Defender initiated an update.</p>
+              <p>What is the timestamp of this update? Answer in HH:MM:SS</p>
+              <p><strong>Note: </strong>The timestamp is in UTC. Convert it to SGT.</p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
@@ -587,13 +595,14 @@
 
           <div class="challenge-card" data-challenge="thor7">
             <div class="challenge-header">
-              <h3>File Path Discovery</h3>
+              <h3>I spy with my little eye</h3>
               <span class="difficulty medium">Medium</span>
             </div>
             <div class="challenge-body">
-              <p>What is the full directory path where the malicious file was found?</p>
-              <p>Format: use forward slashes and lowercase.</p>
-              <p><strong>Example:</strong> c:/users/admin/desktop</p>
+              <p>Files were being verified during the update.</p>
+              <p>The malware type associated with the mpcache file is a form of <strong>spyware</strong>.</p>
+              <p>Research and identify the file containing anti-spyware signatures.</p>
+              <p>Submit the complete filename.</p>
             </div>
             <div class="challenge-footer">
               <input type="text" placeholder="Enter flag..." class="flag-input" />
