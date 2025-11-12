@@ -934,10 +934,16 @@
     </div>
   
     <div class="completion-message" id="completionMessage">
-      <<h2>🎉 You are the forensics goat! 🐐</h2>
-      <p>Congratulations! You've mastered all 24 challenges!</p>
-      <p>You're officially a digital forensics expert! 🔍✨</p>
+      <div class="completion-content">
+        <h2>🎉 You are the forensics goat! 🐐</h2>
+        <p>Congratulations! You've mastered all 24 challenges!</p>
+        <p>You're officially a digital forensics expert! 🔍✨</p>
+        <button class="close-btn" onclick="document.getElementById('completionMessage').classList.remove('show')">
+          Close
+        </button>
+      </div>
     </div>
+
 
   </div>
 
