@@ -6,6 +6,33 @@ async function sha256(message) {
     return hashHex;
 }
 
+function launchConfetti() {
+    const duration = 5000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+        confetti({
+            particleCount: 7,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: ['#667eea', '#764ba2', '#f093fb', '#4CAF50', '#FF9800']
+        });
+        confetti({
+            particleCount: 7,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: ['#667eea', '#764ba2', '#f093fb', '#4CAF50', '#FF9800']
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+}
+
+
 let solvedChallenges = JSON.parse(localStorage.getItem('solvedChallenges')) || [];
 let totalScore = parseInt(localStorage.getItem('totalScore')) || 0;
 
@@ -54,9 +81,10 @@ function setupEventListeners() {
                 input.disabled = true;
 
                 checkAndUnlockChallenges();
-                
-                if (solvedChallenges.length === Object.keys(challenges).length) {
+                // CHECK FOR 24 COMPLETED CHALLENGES
+                if (solvedChallenges.length === 24) {
                     setTimeout(() => {
+                        launchConfetti();
                         document.getElementById('completionMessage').classList.add('show');
                     }, 500);
                 }
@@ -145,8 +173,10 @@ function loadSolvedChallenges() {
         }
     });
     
-    if (solvedChallenges.length === Object.keys(challenges).length) {
+    // CHECK FOR 24 COMPLETED CHALLENGES
+    if (solvedChallenges.length === 24) {
         document.getElementById('completionMessage').classList.add('show');
+        launchConfetti();
     }
 }
 
