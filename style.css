@@ -377,26 +377,6 @@ h1 {
     transform: scale(1.05);
 }
 
-
-@keyframes bounceIn {
-    0% {
-        transform: scale(0.3);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.completion-message h2 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-}
-
 .header-controls {
     display: flex;
     justify-content: center;
