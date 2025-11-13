@@ -314,8 +314,8 @@
               <h3>Command Execution</h3>
             </div>
             <div class="challenge-body">
-              <p><strong>1. </strong>Run <strong>hindsight_gui.exe</strong></p>
-              <p><strong>2. </strong>Run <strong>http://localhost:8080/</strong> in a web browser</p>
+              <p><strong>1. </strong>Run <code>hindsight_gui.exe</code></p>
+              <p><strong>2. </strong>Run <code>http://localhost:8080/</code> in a web browser</p>
               <p>I'm feeling a bit naughty today.😈 </p>
               <p>Let's look at what <strong>cyberarkadm</strong> has been doing on the web.</p>
               <p>Enter the first URL entry in the Hindsight output</p>
@@ -419,7 +419,7 @@
               <h3>Naughty User</h3>
             </div>
             <div class="challenge-body">
-              <p>Use Timeline Explorer to view <strong>EvtxEcmd.csv</strong> (KAPE module output) and cross-reference with the Hayabusa timeline.</p>
+              <p>Use Timeline Explorer to view <code>EvtxEcmd.csv</code> (KAPE module output) and cross-reference with the Hayabusa timeline.</p>
               <p>Apply filters and groupings to identify the user ID of the user who cleared the logs.</p>
             </div>
             <div class="challenge-footer">
@@ -507,7 +507,7 @@
             </div>
             <div class="challenge-body">
               <p>Execute the following command:</p>
-              <p>thor64-lite.exe <strong>-a Filescan--intense --norescontrol --cross-platform -p</strong> path-to-scan <strong>-e</strong> output-directory</p>
+              <p><code>thor64-lite.exe <strong>-a Filescan--intense --norescontrol --cross-platform -p</strong> path-to-scan <strong>-e</strong> output-directory</code></p>
               <p>To clear this challenge, simply enter the word: <code>thor</code></p>
             </div>
             <div class="challenge-footer">
@@ -570,7 +570,7 @@
               <h3>???</h3>
             </div>
             <div class="challenge-body">
-              <p>Navigate to the following directory: <strong>G:\ProgramData\Microsoft\Windows Defender\Support</strong></p>
+              <p>Navigate to the following directory: <code>G:\ProgramData\Microsoft\Windows Defender\Support</code></p>
               <p>This directory contains Windows Defender activity logs.</p>
               <p>Determining if the mpcache file was created due to a detection allows us to identify if this VM has been compromised.</p>
               <p>View the <strong>MPDetection</strong> file using Notepad++. Did Defender detect any malicious files? (y/n)</p>
@@ -592,7 +592,7 @@
               <p>In the same directory, view the <strong>MPLog</strong> file using Notepad++. This file contains all Defender activity.</p>
               <p>Viewing this file allows us to identify when the mpcache file was created, and the events leading up to its creation.</p>
               <p>Search for the mpcache file in Notepad++. Prior to its creation, Defender initiated an update.</p>
-              <p>What is the timestamp of this update? Answer in HH:MM:SS</p>
+              <p>What is the timestamp of this update? Answer in <strong>HH:MM:SS</strong></p>
               <p><strong>Note: </strong>The timestamp is in UTC. Convert it to SGT.</p>
             </div>
             <div class="challenge-footer">
@@ -626,7 +626,7 @@
               
             </div>
             <div class="challenge-body">
-              <p>mpasbase.vdm contains <strong>compressed</strong> anti-spyware signatures.</p>
+              <p><code>mpasbase.vdm</code> contains <strong>compressed</strong> anti-spyware signatures.</p>
               <p>The mpcache file was created to store the <strong>decompressed</strong> anti-spyware signatures to optimise Defender operations.</p>
               <p>Enter <code>igotit</code> to clear this challenge.</p>
             </div>
@@ -645,7 +645,7 @@
               <p>mpasbase.vdm's contents are unreadable, but don't worry!</p>
               <p><strong>1. </strong>Use FTK Imager to extract the mpasbase.vdm file from the snapshot.</p>
               <p><strong>2. </strong>Use WDExtract to convert some of its contents into readable strings:</p>
-              <p>wdextract64.exe <strong>directory-to-extracted-mpasbase.vdm</strong></p>
+              <p><code>wdextract64.exe <strong>directory-to-extracted-mpasbase.vdm</strong></code></p>
               <p>If we can prove that the YARA rule is found in the vdm file, our hypothesis will be proven!</p>
               <p>Search for the previously identified YARA rule, and enter the line number in which the YARA rule is found in.</p>
             </div>
@@ -689,7 +689,7 @@
             </div>
             <div class="challenge-body">
               <p>Execute the following command</p>
-              <p>VSCMount.exe <strong>--dl</strong> drive-to-scan <strong>--mp</strong> output-directory </p>
+              <p><code>VSCMount.exe <strong>--dl</strong> drive-to-scan <strong>--mp</strong> output-directory</code></p>
               <p>To clear this challenge, simply enter the word: <code>vscmount</code></p>
             </div>
             <div class="challenge-footer">
@@ -883,7 +883,7 @@
             <div class="challenge-body">
               <p>Use PhotoRec to recover deleted files. What are the 2 filetypes that PhotoRec managed to recover?</p>
               <p>Answer in alphabetical order with an underscore separating each filetype.</p>
-              <p>Example: docx_pptx</p>
+              <p><strong>Example:</strong> docx_pptx</p>
               <p><strong>Note: </strong>You do not have to wait for the PhotoRec recovery to complete. ;)</p>
             </div>
             <div class="challenge-footer">
